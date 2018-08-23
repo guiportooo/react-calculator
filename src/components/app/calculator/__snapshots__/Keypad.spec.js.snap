@@ -30,6 +30,14 @@ ShallowWrapper {
 >
           
 </div>,
+        <div
+          className="submit-container"
+>
+          <Key
+                    keyType="submit-key"
+                    keyValue="="
+          />
+</div>,
       ],
       "className": "keypad-container",
     },
@@ -59,6 +67,32 @@ ShallowWrapper {
         "rendered": Array [],
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Key
+            keyType="submit-key"
+            keyValue="="
+/>,
+          "className": "submit-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "keyType": "submit-key",
+            "keyValue": "=",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -78,6 +112,14 @@ ShallowWrapper {
             className="operators-container"
 >
             
+</div>,
+          <div
+            className="submit-container"
+>
+            <Key
+                        keyType="submit-key"
+                        keyValue="="
+            />
 </div>,
         ],
         "className": "keypad-container",
@@ -106,6 +148,32 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Key
+              keyType="submit-key"
+              keyValue="="
+/>,
+            "className": "submit-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "keyType": "submit-key",
+              "keyValue": "=",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": "div",
         },
       ],
