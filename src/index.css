@@ -4,6 +4,7 @@ app variables
 
 :root {
   /* background colors */
+  --calculator-background-color: #696969;
   --display-background-color: #1d1f1f;
 
   /* font */
@@ -25,6 +26,10 @@ app variables
   /* display dimensions */
   --display-height: 24%;
   --display-width: 92%;
+
+  /* keypad dimensions */
+  --keypad-height: 72%;
+  --keypad-width: 96%;
 }
 
 /*
