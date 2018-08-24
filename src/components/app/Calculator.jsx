@@ -11,9 +11,26 @@ class Calculator extends Component {
       displayValue: '0',
       numbers: ['9', '8', '7', '6', '5', '4', '3', '2', '1', '.', '0', 'ce'],
       operators: ['/', 'x', '-', '+'],
+      selectedOperator: '',
+      storedValue: '',
     };
 
     this.updateDisplay = this.updateDisplay.bind(this);
+    this.setOperator = this.setOperator.bind(this);
+  }
+
+  setOperator(value) {
+    let { displayValue, selectedOperator, storedValue } = this.state;
+
+    if (selectedOperator === '') {
+      storedValue = displayValue;
+      displayValue = '0';
+      selectedOperator = value;
+    } else {
+      selectedOperator = value;
+    }
+
+    this.setState({ displayValue, selectedOperator, storedValue });
   }
 
   updateDisplay(value) {
@@ -49,6 +66,7 @@ class Calculator extends Component {
           numbers={numbers}
           operators={operators}
           updateDisplay={this.updateDisplay}
+          setOperator={this.setOperator}
         />
       </div>
     );

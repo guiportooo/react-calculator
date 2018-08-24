@@ -7,7 +7,12 @@ describe('Keypad', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <Keypad numbers={[]} operators={[]} updateDisplay={jest.fn()} />
+      <Keypad
+        numbers={[]}
+        operators={[]}
+        updateDisplay={jest.fn()}
+        setOperator={jest.fn()}
+      />
     );
   });
 
@@ -34,7 +39,12 @@ describe('mounted Keypad', () => {
 
   beforeEach(() => {
     wrapper = mount(
-      <Keypad numbers={[]} operators={[]} updateDisplay={jest.fn()} />
+      <Keypad
+        numbers={[]}
+        operators={[]}
+        updateDisplay={jest.fn()}
+        setOperator={jest.fn()}
+      />
     );
   });
 

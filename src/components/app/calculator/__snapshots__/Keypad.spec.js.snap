@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Keypad
     numbers={Array []}
     operators={Array []}
+    setOperator={[Function]}
     updateDisplay={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
