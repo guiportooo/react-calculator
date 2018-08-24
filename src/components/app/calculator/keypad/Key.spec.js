@@ -6,7 +6,7 @@ describe('Key', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Key keyAction={jest.fn} keyType="" keyValue="" />);
+    wrapper = shallow(<Key keyAction={jest.fn()} keyType="" keyValue="" />);
   });
 
   it('should render correctly', () => {

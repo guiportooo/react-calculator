@@ -3,13 +3,23 @@ import PropTypes from 'prop-types';
 import './Keypad.css';
 import Key from './keypad/Key';
 
-const Keypad = ({ numbers, operators }) => {
+const Keypad = ({ numbers, operators, updateDisplay }) => {
   const mapNumbers = numbers.map(number => (
-    <Key key={number} keyType="number-key" keyValue={number} />
+    <Key
+      key={number}
+      keyAction={updateDisplay}
+      keyType="number-key"
+      keyValue={number}
+    />
   ));
 
   const mapOperators = operators.map(operator => (
-    <Key key={operator} keyType="operator-key" keyValue={operator} />
+    <Key
+      key={operator}
+      keyAction={() => {}}
+      keyType="operator-key"
+      keyValue={operator}
+    />
   ));
 
   return (
@@ -17,7 +27,7 @@ const Keypad = ({ numbers, operators }) => {
       <div className="numbers-container">{mapNumbers}</div>
       <div className="operators-container">{mapOperators}</div>
       <div className="submit-container">
-        <Key keyType="submit-key" keyValue="=" />
+        <Key keyAction={() => {}} keyType="submit-key" keyValue="=" />
       </div>
     </div>
   );
@@ -26,6 +36,7 @@ const Keypad = ({ numbers, operators }) => {
 Keypad.propTypes = {
   numbers: PropTypes.arrayOf(PropTypes.string).isRequired,
   operators: PropTypes.arrayOf(PropTypes.string).isRequired,
+  updateDisplay: PropTypes.func.isRequired,
 };
 
 export default Keypad;

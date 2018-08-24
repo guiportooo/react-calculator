@@ -6,7 +6,9 @@ describe('Keypad', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Keypad numbers={[]} operators={[]} />);
+    wrapper = shallow(
+      <Keypad numbers={[]} operators={[]} updateDisplay={jest.fn()} />
+    );
   });
 
   it('should render correctly', () => {
@@ -31,7 +33,9 @@ describe('mounted Keypad', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = mount(<Keypad numbers={[]} operators={[]} />);
+    wrapper = mount(
+      <Keypad numbers={[]} operators={[]} updateDisplay={jest.fn()} />
+    );
   });
 
   it('renders the values of numbers to the DOM', () => {

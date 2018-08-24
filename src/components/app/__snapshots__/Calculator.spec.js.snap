@@ -45,6 +45,7 @@ ShallowWrapper {
                               "+",
                             ]
           }
+          updateDisplay={[Function]}
 />,
       ],
       "className": "calculator-container",
@@ -87,6 +88,7 @@ ShallowWrapper {
             "-",
             "+",
           ],
+          "updateDisplay": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -130,6 +132,7 @@ ShallowWrapper {
                                     "+",
                                   ]
             }
+            updateDisplay={[Function]}
 />,
         ],
         "className": "calculator-container",
@@ -172,6 +175,7 @@ ShallowWrapper {
               "-",
               "+",
             ],
+            "updateDisplay": [Function],
           },
           "ref": null,
           "rendered": null,
