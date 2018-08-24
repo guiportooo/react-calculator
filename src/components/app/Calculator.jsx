@@ -17,6 +17,7 @@ class Calculator extends Component {
 
     this.updateDisplay = this.updateDisplay.bind(this);
     this.setOperator = this.setOperator.bind(this);
+    this.callOperator = this.callOperator.bind(this);
   }
 
   setOperator(value) {
@@ -56,6 +57,43 @@ class Calculator extends Component {
     this.setState({ displayValue: newDisplayValue });
   }
 
+  callOperator() {
+    let { displayValue, selectedOperator, storedValue } = this.state;
+    const updateStoredValue = displayValue;
+
+    displayValue = parseInt(displayValue, 10);
+    storedValue = parseInt(storedValue, 10);
+
+    switch (selectedOperator) {
+      case '+':
+        displayValue = storedValue + displayValue;
+        break;
+      case '-':
+        displayValue = storedValue - displayValue;
+        break;
+      case 'x':
+        displayValue *= storedValue;
+        break;
+      case '/':
+        displayValue = storedValue / displayValue;
+        break;
+      default:
+        displayValue = '0';
+    }
+
+    displayValue = displayValue.toString();
+    selectedOperator = '';
+
+    if (displayValue === 'NaN' || displayValue === 'Infinity')
+      displayValue = '0';
+
+    this.setState({
+      displayValue,
+      selectedOperator,
+      storedValue: updateStoredValue,
+    });
+  }
+
   render() {
     const { displayValue, numbers, operators } = this.state;
 
@@ -67,6 +105,7 @@ class Calculator extends Component {
           operators={operators}
           updateDisplay={this.updateDisplay}
           setOperator={this.setOperator}
+          callOperator={this.callOperator}
         />
       </div>
     );

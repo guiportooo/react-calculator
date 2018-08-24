@@ -12,6 +12,7 @@ describe('Keypad', () => {
         operators={[]}
         updateDisplay={jest.fn()}
         setOperator={jest.fn()}
+        callOperator={jest.fn()}
       />
     );
   });
@@ -44,6 +45,7 @@ describe('mounted Keypad', () => {
         operators={[]}
         updateDisplay={jest.fn()}
         setOperator={jest.fn()}
+        callOperator={jest.fn()}
       />
     );
   });
