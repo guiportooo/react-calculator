@@ -37,10 +37,7 @@
     "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:lint:js": "eslint --ext=js --ext=jsx .",
-    "test:lint:scss": "stylelint --config=.stylelintrc '**/*.css'",
-    "test:unit": "react-scripts test --env=jsdom",
-    "test": "run-s test:**",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
